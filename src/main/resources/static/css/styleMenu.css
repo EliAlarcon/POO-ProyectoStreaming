@@ -1,3 +1,12 @@
-.seccionPeliculas{
-    display: flex;
+section{
+    margin-left: 5px;
+}
+#Series{
+    height: 500px;
+}
+#Peliculas{
+    height: 600px;
+}
+#Documentales{
+    height: 500px;
 }
