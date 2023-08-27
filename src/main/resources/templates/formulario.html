@@ -13,29 +13,31 @@
     <hr>
 </header>
 <section>
-    <form class="formulario" object="usuario">
-        <legend>Formulario de Registro</legend>
+    <form class="formulario" method="post" th:object="${usuario}">
+        <legend class="titulo">Formulario de Registro</legend>
         <div class="mb-3">
             <label for="nombre" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="nombre">
+            <input type="text" class="form-control" id="nombre" th:field="*{nombre}">
         </div>
         <div class="mb-3">
             <label for="apellido" class="form-label">Apellido</label>
-            <input type="text" class="form-control" id="apellido">
+            <input type="text" class="form-control" id="apellido" th:field="*{apellido}">
         </div>
         <div class="mb-3">
             <label for="fechaNacimiento" class="form-label">Fecha de nacimiento</label>
-            <input type="date" class="form-control" id="fechaNacimiento">
+            <input type="date" class="form-control" id="fechaNacimiento" th:field="*{fechaNacimiento}">
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" th:field="*{correo}">
         </div>
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Crea una contraseña</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
+            <input type="password" class="form-control" id="exampleInputPassword1" th:field="*{contrasenia}">
         </div>
-        <button type="submit" class="btn btn-light">Suscribirse</button>
+        <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-success">Suscribirse</button>
+        </div>
     </form>
 </section>
 <div class="contenedorFooter">

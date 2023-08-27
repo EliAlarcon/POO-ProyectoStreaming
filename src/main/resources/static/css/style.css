@@ -4,7 +4,7 @@
     height: 70px;
 }
 .formulario{
-    text-align: center;
+    text-align: left;
     margin-left: 30%;
     margin-right: 30%;
 }
@@ -19,4 +19,7 @@
     align-content: center;
     text-align: center;
     color: white;
+}
+.titulo{
+    text-align: center;
 }

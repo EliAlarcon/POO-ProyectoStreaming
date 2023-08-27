@@ -18,6 +18,6 @@ public class Usuario {
     private String apellido;
     private LocalDate fechaNacimiento;
     private String correo;
-    private String contraseña;
+    private String contrasenia;
 
 }
