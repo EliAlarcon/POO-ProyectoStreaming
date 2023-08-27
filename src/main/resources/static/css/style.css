@@ -1,0 +1,22 @@
+.logo{
+    margin-left: 2%;
+    width: 70px;
+    height: 70px;
+}
+.formulario{
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+.contenedorFooter {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 5%;
+    align-content: center;
+    background-color: black;
+}
+.derechos{
+    align-content: center;
+    text-align: center;
+    color: white;
+}

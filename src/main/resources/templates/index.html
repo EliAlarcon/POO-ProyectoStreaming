@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EcuadorTV</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<header>
+    <img th:src="@{/images/EcuadorTV_logo.png}" class="img-fluid logo" alt="EcuadorTV_logo">
+    <hr>
+</header>
+<section>
+    <form class="formulario">
+        <legend>Iniciar sesión</legend>
+        <p>Debes usar tu correo electrónico y contraseña para iniciar sesión en tu cuenta de EcuadorTV y ver tus series y películas favoritas</p>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Crea una contraseña</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+        <div>
+            ¿Primera vez en EcuadorTV? <a class="nav-link" href="registro">Suscribirse</a>
+        </div>
+    </form>
+</section>
+<div class="contenedorFooter">
+    <footer>
+        <div class="derechos">
+            <img th:src="@{/images/EcuadorTV_logo.png}" class="img-fluid logo" alt="EcuadorTV_logo">
+            <p>
+                El servicio de EcuadorTV es comercializado por EcuadorTV.Inc
+            </p>
+            <p>
+                EcuadorTV. Todos los derechos reservados
+            </p>
+        </div>
+    </footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
