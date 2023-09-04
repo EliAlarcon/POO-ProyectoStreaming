@@ -1,4 +1,4 @@
-package com.alarcon.springstreming.usuarios;
+package com.alarcon.springstreming.entidades;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
