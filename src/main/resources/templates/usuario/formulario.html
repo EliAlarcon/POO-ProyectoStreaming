@@ -48,12 +48,20 @@
             <input type="password" class="form-control" id="exampleInputPassword1" th:field="*{contrasenia}">
         </div>
 
+        <!--Plan-->
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Plan</label>
+            <select class="form-control" th:field="*{plan}">
+                <option th:each="plan: ${planes}" th:value="${plan.id}"
+                        th:text="${plan.nombre}"></option>
+            </select>
+        </div>
 
         <div class="d-grid gap-2">
             <button type="submit" class="btn btn-success">Suscribirse</button>
         </div>
         <div>
-            Ya tienes una cuenta <a class="nav-link" href="/static">Iniciar Sesión</a>
+            Ya tienes una cuenta <a class="nav-link" th:href="@{/}">Iniciar Sesión</a>
         </div>
     </form>
 </section>

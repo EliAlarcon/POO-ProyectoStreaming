@@ -1,5 +1,7 @@
 package com.alarcon.springstreming.controladores;
 
+import com.alarcon.springstreming.entidades.Plan;
+import com.alarcon.springstreming.repositorios.PlanRepository;
 import com.alarcon.springstreming.repositorios.UsuarioRepository;
 import com.alarcon.springstreming.entidades.Usuario;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,11 +19,18 @@ public class UsuarioController {
     @Autowired
     UsuarioRepository usuarioRepository;
 
+    @Autowired
+    PlanRepository planRepository;
+
     //CRUD - CREAR
     @GetMapping("/registro")
     public String registro(Model model) {
         model.addAttribute("usuario", new Usuario());
-        return "/usuario/formulario";
+
+        List<Plan> planes = planRepository.findAll();
+        model.addAttribute("planes", planes);
+
+        return "usuario/formulario";
     }
 
     @PostMapping("/registro")
@@ -30,6 +39,6 @@ public class UsuarioController {
         return "redirect:/";
     }
 
-    //CRUD - READ
-  
+
+
 }
