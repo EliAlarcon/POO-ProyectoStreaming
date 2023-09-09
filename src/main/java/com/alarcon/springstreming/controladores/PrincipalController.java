@@ -10,4 +10,9 @@ public class PrincipalController {
     public String home(){
         return "index";
     }
+
+    @GetMapping("/logout")
+    public String cerrarSesion(){
+        return "/login";
+    }
 }

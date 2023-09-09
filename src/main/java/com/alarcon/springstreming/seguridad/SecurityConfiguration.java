@@ -28,37 +28,38 @@ public class SecurityConfiguration {
     @Order(1)
     public SecurityFilterChain adminFilterChain(HttpSecurity http) throws Exception {
         http
-                .securityMatcher("/admin/**")
-                .authorizeHttpRequests(authorize -> authorize
-                        .anyRequest().hasRole("ADMIN")
-                )
-                .httpBasic(Customizer.withDefaults());
-        return http.build();
-    }
-
-    @Bean
-    @Order(2)
-    public SecurityFilterChain userFilterChain(HttpSecurity http) throws Exception {
-        http
-                .securityMatcher("/user/**")
-                .authorizeHttpRequests(authorize -> authorize
-                        .anyRequest().hasRole("USER")
-                )
-                .httpBasic(Customizer.withDefaults());
-        return http.build();
-    }
-
-    @Bean
-    @Order(3)
-    public SecurityFilterChain publicFilterChain(HttpSecurity http) throws Exception {
-        http
-                .securityMatcher("/", "/registro", "/plan")
+                .securityMatcher("/registro", "/menuprincipal", "/suscribe/plan", "/")
                 .authorizeHttpRequests(authorize -> authorize
                         .anyRequest().permitAll()
                 )
                 .httpBasic(Customizer.withDefaults());
         return http.build();
     }
+
+
+//    @Bean
+//    @Order(2)
+//    public SecurityFilterChain userFilterChain(HttpSecurity http) throws Exception {
+//        http
+//                .securityMatcher("/user/**")
+//                .authorizeHttpRequests(authorize -> authorize
+//                        .anyRequest().hasRole("USER")
+//                )
+//                .httpBasic(Customizer.withDefaults());
+//        return http.build();
+//    }
+
+//    @Bean
+//    @Order(3)
+//    public SecurityFilterChain publicFilterChain(HttpSecurity http) throws Exception {
+//        http
+//                .securityMatcher("/", "/registro", "/suscribe/plan")
+//                .authorizeHttpRequests(authorize -> authorize
+//                        .anyRequest().permitAll()
+//                )
+//                .httpBasic(Customizer.withDefaults());
+//        return http.build();
+//    }
 
     @Bean
     public SecurityFilterChain formLoginFilterChain(HttpSecurity http) throws Exception {
